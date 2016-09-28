@@ -1,17 +1,12 @@
 function getPokemon() {
   $.ajax({
     method: "GET",
-    url: ""
+    url: "http://pokeapi.co/api/v2/",
     dataType: "jsonp",
     jsonp: "callback",
     success: function(res) {
-      var pages = res.query && res.query.pages
-      if (pages) {
-        var pageKeys = Object.keys(pages);
-        var text = pages[pageKeys[0]].extract;          
-        var processed = processor(text);
-        $(".text-display").text(processed);
-      }                
+      console.log("got it")
+      console.log(res)
     }
   })
 }
