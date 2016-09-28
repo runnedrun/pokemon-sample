@@ -1,7 +1,7 @@
-function getWikiIntro(title, processor) {
+function getPokemon() {
   $.ajax({
     method: "GET",
-    url: "http://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exlimit=max&explaintext&exintro&titles=" + title,    
+    url: ""
     dataType: "jsonp",
     jsonp: "callback",
     success: function(res) {
